@@ -1,15 +1,17 @@
-import {
-  ReactNode,
-  createContext,
-
-  useEffect,
-  useState,
-} from 'react';
+import { ReactNode, createContext, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import { getCurrentUser } from '@/lib/appwrite/api';
 import { IContextType, IUser } from '@/types';
-import { INITIAL_USER } from './constants';
+
+const INITIAL_USER: IUser = {
+  id: '',
+  name: '',
+  username: '',
+  email: '',
+  imageUrl: '',
+  bio: '',
+};
 
 const INITIAL_STATE: IContextType = {
   user: INITIAL_USER,

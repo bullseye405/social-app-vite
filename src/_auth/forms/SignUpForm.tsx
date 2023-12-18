@@ -15,12 +15,12 @@ import {
 import { Input } from '@/components/ui/input';
 import Loader from '@/components/ui/shared/Loader';
 import { useToast } from '@/components/ui/use-toast';
-import { SignUpValidationSchema } from '@/lib/validations';
+import { useUserContext } from '@/context/constants';
 import {
   useCreateUserAccount,
   useSignInAccount,
 } from '@/lib/react-query/queries';
-import { useUserContext } from '@/context/AuthContext';
+import { SignUpValidationSchema } from '@/lib/validations';
 
 const SignUpForm = () => {
   const { toast } = useToast();
