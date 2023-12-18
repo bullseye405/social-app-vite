@@ -5,6 +5,7 @@ import {
   ISignInAccountRequest,
   createUserAccount,
   signInAccount,
+  signOutAccount,
 } from '../appwrite/api';
 
 export const useCreateUserAccount = () => {
@@ -16,5 +17,11 @@ export const useCreateUserAccount = () => {
 export const useSignInAccount = () => {
   return useMutation({
     mutationFn: (user: ISignInAccountRequest) => signInAccount(user),
+  });
+};
+
+export const useSignOutAccount = () => {
+  return useMutation({
+    mutationFn: signOutAccount,
   });
 };

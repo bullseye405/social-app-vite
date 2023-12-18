@@ -15,7 +15,7 @@ import {
 import { Input } from '@/components/ui/input';
 import Loader from '@/components/ui/shared/Loader';
 import { useToast } from '@/components/ui/use-toast';
-import { useUserContext } from '@/context/constants';
+import { useUserContext } from '@/constants';
 import { useSignInAccount } from '@/lib/react-query/queries';
 import { SignInValidationSchema } from '@/lib/validations';
 
